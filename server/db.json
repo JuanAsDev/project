@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "email": "hash@mail.com",
+      "username": "hash",
+      "password": "hash",
+      "id": 1
+    },
+    {
+      "email": "hash@mail.com",
+      "username": "hash",
+      "password": "hash",
+      "id": 2
+    },
+    {
+      "email": "ges@mail.com",
+      "username": "ges",
+      "password": "ges",
+      "id": 5
+    }
+  ],
+  "postings": [
+    {
+      "id": 1,
+      "title": "Judul Posting 1",
+      "content": "Konten Posting 1",
+      "status": 1
+    },
+    {
+      "id": 2,
+      "title": "Judul Posting 2",
+      "content": "Konten Posting 2",
+      "status": 0
+    },
+    {
+      "title": "judul2",
+      "content": "konten2",
+      "status": 1,
+      "id": 3
+    },
+    {
+      "title": "draft",
+      "content": "draft",
+      "status": 0,
+      "id": 4
+    }
+  ]
+}
