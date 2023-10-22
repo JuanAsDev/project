@@ -6,7 +6,6 @@ import Navbar from "./Navbar.js";
 
 const Posting = () => {
   const { isAdminLoggedIn } = useContext(AdminContext);
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -22,13 +21,7 @@ const Posting = () => {
     }
   }, [isAdminLoggedIn, navigate]);
 
-  // const handleSubmit = () => {};
-
-  // const handleCheckboxChange = (postId) => {};
   useEffect(() => {
-    // Mengambil daftar postingan dari server atau penyimpanan lokal.
-    // Implementasikan sesuai kebutuhan Anda, berikut contoh fetch dari server:
-
     fetch("http://localhost:3500/postings")
       .then((response) => response.json())
       .then((data) => setPostings(data))
@@ -36,9 +29,6 @@ const Posting = () => {
   }, []);
 
   const handleSubmit = () => {
-    // Menyimpan posting baru ke server atau penyimpanan lokal.
-    // Implementasikan sesuai kebutuhan Anda, berikut contoh pengiriman data ke server:
-
     const newPosting = {
       title,
       content,
@@ -54,21 +44,16 @@ const Posting = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Perbarui daftar postingan dengan postingan baru.
         setPostings([...postings, data]);
       })
       .catch((error) => console.error("Kesalahan saat menyimpan data:", error));
 
-    // Reset input fields setelah posting berhasil.
     setTitle("");
     setContent("");
     setStatus(0);
   };
 
   const handleCheckboxChange = (postId) => {
-    // Toggle status posting pada server atau penyimpanan lokal berdasarkan postId.
-    // Implementasikan sesuai kebutuhan Anda.
-
     const updatedPostings = postings.map((post) => {
       if (post.id === postId) {
         post.status = post.status === 0 ? 1 : 0;
